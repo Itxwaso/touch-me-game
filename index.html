@@ -13,173 +13,194 @@
     <title>CONTACT | MR WASI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-    <style>
     /* Reset default margin and padding */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    /* Body styling */
-    body {
-        font-family: 'Helvetica', sans-serif;
-        background: linear-gradient(135deg, #2C3E50, #34495E);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        color: #fff;
-        overflow: hidden;
-        flex-direction: column;
-    }
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #FF8C00, #FF4B2B); /* Vibrant gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    overflow: hidden;
+    flex-direction: column;
+}
 
-    /* Message Box */
-    .message-box {
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 15px;
-        max-width: 400px;
-        width: 100%;
-        padding: 20px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-        margin-bottom: 20px;
-        backdrop-filter: blur(10px);
-        text-align: left;
-    }
+/* Message Box */
+.message-box {
+    background: rgba(255, 255, 255, 0.1); /* Transparent background with some white */
+    border-radius: 15px;
+    max-width: 450px;
+    width: 100%;
+    padding: 25px;
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    backdrop-filter: blur(15px);
+    text-align: left;
+}
 
-    /* Header Section */
-    .header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-    }
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
-    .header img {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        margin-right: 15px;
-        border: 3px solid #3498db;
-    }
+.header img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    border: 3px solid #FF4B2B;
+    transition: transform 0.3s ease;
+}
 
-    .username {
-        font-weight: 600;
-        font-size: 16px;
-        color: #ecf0f1;
-    }
+.header img:hover {
+    transform: scale(1.1);
+}
 
-    .description {
-        font-size: 14px;
-        color: #95a5a6;
-    }
+.username {
+    font-weight: 700;
+    font-size: 18px;
+    color: #FF8C00;
+}
 
-    /* Input and Textarea Styling */
-    input, textarea {
-        width: 100%;
-        padding: 12px;
-        margin-top: 10px;
-        border-radius: 8px;
-        border: 1px solid #7f8c8d;
-        background: #ecf0f1;
-        color: #2c3e50;
-        font-size: 14px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+.description {
+    font-size: 14px;
+    color: #FFF;
+}
 
-    textarea {
-        resize: none;
-        height: 100px;
-    }
+/* Input and Textarea Styling */
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #FF8C00;
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFF;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
 
-    /* Send Button */
-    .send-button {
-        background: #1abc9c;
-        color: white;
-        border: none;
-        border-radius: 25px;
-        padding: 15px 30px;
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 20px;
-        transition: background-color 0.3s;
-        width: 60%;
-        max-width: 250px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
+input:focus, textarea:focus {
+    border-color: #FF4B2B;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.4);
+}
 
-    .send-button:hover {
-        background: #16a085;
-    }
+/* Textarea specific styling */
+textarea {
+    resize: none;
+    height: 120px;
+}
 
-    /* Social Media Links */
-    .social-links {
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-    }
+/* Send Button */
+.send-button {
+    background: #FF4B2B;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 18px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.4s, transform 0.3s ease;
+    width: 70%;
+    max-width: 300px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
 
-    .social-links a {
-        margin: 0 15px;
-        color: #ecf0f1;
-        font-size: 28px;
-        transition: color 0.3s;
-    }
+.send-button:hover {
+    background: #FF8C00;
+    transform: scale(1.05);
+}
 
-    .social-links a:hover {
-        color: #3498db;
-    }
+/* Social Media Links */
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-    /* Footer Section */
-    .footer {
-        font-size: 12px;
-        color: #ecf0f1;
-        text-align: center;
-        margin-top: 20px;
-        width: 100%;
-        max-width: 350px;
-    }
+.social-links a {
+    color: #FFF;
+    font-size: 32px;
+    transition: transform 0.3s, color 0.3s;
+}
 
-    .footer a {
-        color: #3498db;
-        font-weight: bold;
-        text-decoration: none;
-        font-style: italic;
-        margin: 0 10px;
-    }
+.social-links a:hover {
+    transform: scale(1.2);
+    color: #FF4B2B;
+}
 
-    .footer a:hover {
-        text-decoration: underline;
-    }
+/* Footer Section */
+.footer {
+    font-size: 14px;
+    color: #FFF;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 350px;
+}
 
-    /* Status Message */
-    .status {
-        font-size: 18px;
-        color: #ecf0f1;
-        margin-top: 10px;
-        text-align: center;
-    }
+.footer a {
+    color: #FF8C00;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: italic;
+    margin: 0 10px;
+    transition: color 0.3s ease, text-decoration 0.3s;
+}
 
-    .status a {
-        color: #1abc9c;
-        font-weight: bold;
-        text-decoration: none;
-    }
+.footer a:hover {
+    color: #FF4B2B;
+    text-decoration: underline;
+}
 
-    /* Background Video */
-    .video-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-        opacity: 0.6;
-    }
+/* Status Message */
+.status {
+    font-size: 20px;
+    color: #FFF;
+    margin-top: 15px;
+    text-align: center;
+}
 
-</style>
+.status a {
+    color: #FF8C00;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
+.status a:hover {
+    color: #FF4B2B;
+}
+
+/* Background Video */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.6;
+    filter: brightness(70%);
+}
+
+   
 </head>
 <body>
     <!-- Background video -->
